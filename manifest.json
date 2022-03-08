@@ -1,5 +1,5 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "My Extension",
     "version": "0.1.0",
     "content_scripts":[
@@ -7,15 +7,12 @@
             "matches":["*://*.youtube.com/*"],
             "js":["main.js"]
         }  
-    ],
-    "browser_action": {
-        "default_title": "Bear"
-      },
-      "background": {
-        "scripts": ["background.js"]
-      },
-      "permissions": [
-        "notifications",
-        "tabs"
-      ]
+    ],   
+    "background": {
+      "service_worker": "background.js"
+    },
+    "permissions": [
+      "notifications",
+      "tabs"
+    ]
 }
