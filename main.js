@@ -29,7 +29,7 @@ async function mainFunction(){
 
     }
     else{
-        closeWindow();
+        
         console.log("Masti Nhi");
         play_pause[0].click();
         
